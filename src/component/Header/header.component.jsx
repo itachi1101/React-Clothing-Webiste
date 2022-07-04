@@ -17,10 +17,10 @@ const Header = ({ currentUser, hidden }) => (
       <Logo className="logo" />
     </Link>
     <div className="options">
-      <Link className="option" to="/shop">
+      <Link style={{ color: "black" }} className="option" to="/shop">
         SHOP
       </Link>
-      <Link className="option" to="/shop">
+      <Link style={{ color: "black" }} className="option" to="/shop">
         CONTACT
       </Link>
       {currentUser ? (
@@ -28,7 +28,7 @@ const Header = ({ currentUser, hidden }) => (
           SIGN OUT
         </div>
       ) : (
-        <Link className="option" to="/signIn">
+        <Link style={{ color: "black" }} className="option" to="/signIn">
           SIGN IN
         </Link>
       )}
@@ -39,8 +39,8 @@ const Header = ({ currentUser, hidden }) => (
 );
 // function allowing us to access the state
 // state here the root reduer
-const mapStateToProps = createStructuredSelector ({
+const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  hidden:selectCartHidden,
+  hidden: selectCartHidden,
 });
 export default connect(mapStateToProps)(Header);
